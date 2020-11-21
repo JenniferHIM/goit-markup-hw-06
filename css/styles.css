@@ -862,6 +862,7 @@ textarea {
 
 .form-input {
   width: 100%;
+  padding-left: 45px;
 }
 
 .form-button {
@@ -872,6 +873,10 @@ textarea {
 
 .input-wrapper {
   position: relative;
+}
+
+.input-wrapper .form-input {
+  padding-left: 45px;
 }
 
 .input-wrapper:focus-within > .form-icon {
@@ -912,7 +917,46 @@ textarea {
   left: 13px;
 }
 
-.acception {
-  text-align: center;
+.policy-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-lable {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.71;
   margin-bottom: 30px;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.policy-link {
+  color: var(--accent-color);
+  margin-left: 4px;
 }
